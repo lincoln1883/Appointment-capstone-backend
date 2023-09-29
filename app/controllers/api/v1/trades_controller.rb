@@ -24,5 +24,4 @@ class Api::V1::TradesController < ApplicationController
   def trade_params
     # This is the action that will be called when the route is hit
   end
-
 end

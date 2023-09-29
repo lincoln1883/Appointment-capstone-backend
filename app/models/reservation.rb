@@ -1,5 +1,4 @@
 class Reservation < ApplicationRecord
-    belongs_to :user
-    belongs_to :trade
-
+  belongs_to :user
+  belongs_to :trade
 end
