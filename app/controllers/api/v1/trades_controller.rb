@@ -1,35 +1,28 @@
 class Api::V1::TradesController < ApplicationController
   def index
-    @trades = Trade.all
-    render json: @trades
+    # This is the action that will be called when the route is hit
   end
 
   def create
-    @trade = Trade.create(trade_params)
-    render json: @trade
+    # This is the action that will be called when the route is hit
   end
 
   def show
-    @trade = Trade.find(params[:id])
-    render json: @trade
+    # This is the action that will be called when the route is hit
   end
 
   def update
-    @trade = Trade.find(params[:id])
-    @trade.update(trade_params)
-    render json: @trade
+    # This is the action that will be called when the route is hit
   end
 
   def destroy
-    @trade = Trade.find(params[:id])
-    @trade.destroy
-    render json: @trade
+    # This is the action that will be called when the route is hit
   end
 
   private
 
   def trade_params
-    params.permit(:user_id, :name, :description, :image, :location, :price, :duration, :type)
-  end  
+    # This is the action that will be called when the route is hit
+  end
 
 end
