@@ -7,7 +7,7 @@ class CreateTrades < ActiveRecord::Migration[7.0]
       t.string :location
       t.decimal :price
       t.string :duration
-      t.string :type
+      t.string :trade_type  # Renamed "type" column to "trade_type"
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
