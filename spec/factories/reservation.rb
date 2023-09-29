@@ -1,6 +1,5 @@
-class Reservation < ApplicationRecord
-    belongs_to :user
-    belongs_to :trade
-
-end
+FactoryBot.define do
+    factory :user do
+    end
+  end
   
