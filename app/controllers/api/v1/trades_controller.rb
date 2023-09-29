@@ -15,7 +15,8 @@ class Api::V1::TradesController < ApplicationController
     @trade = Trade.new(trade_params)
 
     # Step 3: Associate the trade with the currently authenticated user
-    # @trade.user = current_user # You'll need to define the current_user method based on your authentication system
+    # This will be replaced with the following line in the next step:
+    # @trade.user = current_user
     first_user = User.first
     @trade.user = first_user
 
