@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_30_052651) do
     t.string "location"
     t.decimal "price"
     t.string "duration"
-    t.string "type"
+    t.string "trade_type"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
