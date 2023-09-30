@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       
       # Define routes for Trades
       resources :trades, only: [:index, :create, :show, :update, :destroy]
+      resources :reservations, only: [:index, :create, :show, :destroy]
     end
   end
 end
