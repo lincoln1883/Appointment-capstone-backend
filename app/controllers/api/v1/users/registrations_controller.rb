@@ -5,7 +5,7 @@ class Api::V1::Users::RegistrationsController < Devise::RegistrationsController
 
   private
 
-  def respond_with(resource)
+  def respond_with(resource, _opts = {})
     if request.method == 'POST' && resource.persisted?
       render json: {
         status: { code: 200, message: 'Signed up successfully.'},
