@@ -1,32 +1,16 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
-    puts "................................"
-    puts 'Hey, you are in the reservation controller.'
-    user_id = 1
-    @reservations = Reservation.includes(:trade).where(user_id: user_id)
-    if @reservations.any?
-      trade_names = @reservations.map { |reservation| reservation.trade.name }
-      puts 'Trade names reserved by the user:', trade_names
-    else
-      puts 'No reservations found for the user.'
-    end
-    puts "................................"
-  
+    current_user = User.find_by(id: 1)
+    @reservations = Reservation.includes(:trade).where(user_id: current_user)
     render json: @reservations, include: :trade, status: :ok
   end
 
   def create
-    puts 'Hey, you are in the reservation controller.'
     current_user = User.find_by(id: 1)
-    @tradeId = params[:trade_id]
-    puts "................................"
-    puts 'The trade is', @tradeId
-    puts 'The date is', params[:date]
-    puts 'The user is', current_user.name
-    puts "................................"
-    @trade = Trade.find_by(id: @tradeId)
+    @trade_id = params[:trade_id]
+    @trade = Trade.find_by(id: @trade_id)
     @date = params[:date]
-    
+
     @message = nil
     @status = nil
 
@@ -36,10 +20,10 @@ class Api::V1::ReservationsController < ApplicationController
     else
       @reservation = Reservation.new(user: current_user, trade: @trade, date: @date)
 
-      if @reservation.save 
+      if @reservation.save
         @message = 'Trade reserved successfully'
         @status = :created
-      else 
+      else
         @errors = @reservation.errors.full_messages
         @error = 'Reservation failed'
         @status = :unprocessable_entity
@@ -53,9 +37,9 @@ class Api::V1::ReservationsController < ApplicationController
     render json: response_hash, status: @status
   end
 
-  def show 
+  def show
     current_user = User.find_by(id: 1)
-    reservation_id = params[:id] 
+    reservation_id = params[:id]
     reservations = Reservation.includes(:trade).where(id: reservation_id, user_id: current_user.id)
 
     if reservations.empty?
@@ -73,5 +57,4 @@ class Api::V1::ReservationsController < ApplicationController
       render json: { error: 'Failed to delete reservation' }, status: :unprocessable_entity
     end
   end
-  
 end
