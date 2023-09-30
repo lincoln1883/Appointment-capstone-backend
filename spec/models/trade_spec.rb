@@ -4,7 +4,7 @@ RSpec.describe Trade, type: :model do
   # Validation tests
   it 'is valid with valid attributes' do
     user = FactoryBot.create(:user)
-    trade = FactoryBot.build(:trade, user: user)
+    trade = FactoryBot.build(:trade, user:)
     expect(trade).to be_valid
   end
 
