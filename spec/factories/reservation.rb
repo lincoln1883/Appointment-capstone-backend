@@ -7,7 +7,7 @@ FactoryBot.define do
     price { Faker::Number.decimal(l_digits: 2) }
     duration { Faker::Number.number(digits: 2) }
     type { 'Reservation' }
-    user_id { nil }
-    trade_id { nil }
+    user { association :user }
+    trade { association :trade }
   end
 end

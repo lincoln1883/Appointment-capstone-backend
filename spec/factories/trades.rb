@@ -7,6 +7,6 @@ FactoryBot.define do
     price { '9.99' }
     duration { 'MyString' }
     type { '' }
-    user { nil }
+    user { association :user }
   end
 end
