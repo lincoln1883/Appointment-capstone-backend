@@ -2,7 +2,6 @@ class Api::V1::ReservationsController < ApplicationController
   def index
     puts "................................"
     puts 'Hey, you are in the reservation controller.'
-    
     user_id = 1
     @reservations = Reservation.includes(:trade).where(user_id: user_id)
     if @reservations.any?
@@ -11,9 +10,8 @@ class Api::V1::ReservationsController < ApplicationController
     else
       puts 'No reservations found for the user.'
     end
-
     puts "................................"
-   
+  
     render json: @reservations, include: :trade, status: :ok
   end
 
@@ -26,7 +24,6 @@ class Api::V1::ReservationsController < ApplicationController
     puts 'The date is', params[:date]
     puts 'The user is', current_user.name
     puts "................................"
-
     @trade = Trade.find_by(id: @tradeId)
     @date = params[:date]
     
@@ -55,4 +52,26 @@ class Api::V1::ReservationsController < ApplicationController
 
     render json: response_hash, status: @status
   end
+
+  def show 
+    current_user = User.find_by(id: 1)
+    reservation_id = params[:id] 
+    reservations = Reservation.includes(:trade).where(id: reservation_id, user_id: current_user.id)
+
+    if reservations.empty?
+      render json: { message: 'No reservations found for the user and trades.' }, status: :not_found
+    else
+      render json: reservations, include: :trade, status: :ok
+    end
+  end
+
+  def destroy
+    reservation = Reservation.find(params[:id])
+    if reservation.destroy
+      render json: { message: 'Reservation deleted successfully' }, status: :ok
+    else
+      render json: { error: 'Failed to delete reservation' }, status: :unprocessable_entity
+    end
+  end
+  
 end
