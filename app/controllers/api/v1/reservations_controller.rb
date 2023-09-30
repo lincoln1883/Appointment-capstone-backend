@@ -2,12 +2,19 @@ class Api::V1::ReservationsController < ApplicationController
   def index
     puts "................................"
     puts 'Hey, you are in the reservation controller.'
-    @reservations = Reservation.includes(:trade).all
-    p 'the reservations are', @reservations.trade
+    
+    user_id = 1
+    @reservations = Reservation.includes(:trade).where(user_id: user_id)
+    if @reservations.any?
+      trade_names = @reservations.map { |reservation| reservation.trade.name }
+      puts 'Trade names reserved by the user:', trade_names
+    else
+      puts 'No reservations found for the user.'
+    end
+
     puts "................................"
    
-    render json: @reservations, status: :ok
-
+    render json: @reservations, include: :trade, status: :ok
   end
 
   def create
