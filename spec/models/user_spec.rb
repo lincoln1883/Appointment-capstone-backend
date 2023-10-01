@@ -17,4 +17,14 @@ RSpec.describe User, type: :model do
     user.save
     expect(user.role).to eq('user')
   end
+
+  it 'is not an admin by default' do
+    user = FactoryBot.build(:user)
+    expect(user.admin?).to be_falsey
+  end
+
+  it 'can have an admin role' do
+    user = FactoryBot.build(:user, role: 'admin')
+    expect(user.admin?).to be_truthy
+  end
 end

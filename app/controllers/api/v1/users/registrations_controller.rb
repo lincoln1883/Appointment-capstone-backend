@@ -8,7 +8,7 @@ class Api::V1::Users::RegistrationsController < Devise::RegistrationsController
   def respond_with(resource, _opts = {})
     if request.method == 'POST' && resource.persisted?
       render json: {
-        status: { code: 201, message: 'Signed up successfully.' },
+        status: { code: 200, message: 'Signed up successfully.' },
         data: UserSerializer.new(resource).serializable_hash[:data][:attributes]
       }, status: :ok
     elsif request.method == 'DELETE'
