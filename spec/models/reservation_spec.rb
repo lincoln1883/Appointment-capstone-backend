@@ -35,5 +35,4 @@ RSpec.describe Reservation, type: :model do
     duplicate_reservation = Reservation.new(user_id: @user.id, trade_id: @trade.id, date: Date.today)
     expect(duplicate_reservation).not_to be_valid
   end
-  
 end
