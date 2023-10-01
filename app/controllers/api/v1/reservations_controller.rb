@@ -38,7 +38,7 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def show
-    current_user = User.find_by(id: 1)  
+    current_user = User.find_by(id: 1)
     reservation_id = params[:id]
     reservations = Reservation.includes(:trade).where(id: reservation_id, user_id: current_user.id)
 

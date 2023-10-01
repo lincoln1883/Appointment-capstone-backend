@@ -4,8 +4,8 @@ RSpec.describe 'Reservation API', type: :request do
   describe 'GET /reservations' do
     it 'returns a list of user reservations with associated trades' do
       user = create(:user, id: 1)
-      reservation1 = create(:reservation, user: user)
-      create(:reservation, user: user)
+      reservation1 = create(:reservation, user:)
+      create(:reservation, user:)
 
       get '/api/v1/reservations'
       expect(response).to have_http_status(:ok)
@@ -55,8 +55,8 @@ RSpec.describe 'Reservation API', type: :request do
       it 'does not create a reservation' do
         user = create(:user, id: 1)
         trade = create(:trade, id: 5)
-        create(:reservation, user: user, trade: trade, date: '2023-10-01')
-        post '/api/v1/reservations', params: invalid_attributes , as: :json
+        create(:reservation, user:, trade:, date: '2023-10-01')
+        post '/api/v1/reservations', params: invalid_attributes, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to include('application/json')
 
@@ -71,7 +71,7 @@ RSpec.describe 'Reservation API', type: :request do
     it 'returns a single reservation with associated trade' do
       user = create(:user, id: 1)
       trade = create(:trade)
-      reservation = create(:reservation, user: user, trade: trade)
+      reservation = create(:reservation, user:, trade:)
       get "/api/v1/reservations/#{reservation.id}"
 
       expect(response).to have_http_status(:ok)
@@ -86,7 +86,7 @@ RSpec.describe 'Reservation API', type: :request do
 
     it 'returns a not found message if reservation is not found' do
       create(:user, id: 1)
-      get '/api/v1/reservations/999' 
+      get '/api/v1/reservations/999'
       expect(response).to have_http_status(:not_found)
 
       json_response = JSON.parse(response.body)
@@ -97,7 +97,7 @@ RSpec.describe 'Reservation API', type: :request do
 
   describe 'DELETE /api/v1/reservations/:id' do
     it 'deletes a reservation' do
-      reservation = create(:reservation) 
+      reservation = create(:reservation)
       delete "/api/v1/reservations/#{reservation.id}"
 
       expect(response).to have_http_status(:ok)
@@ -107,9 +107,8 @@ RSpec.describe 'Reservation API', type: :request do
 
     it 'returns an error for a non-existent reservation' do
       expect do
-        delete "/api/v1/reservations/999"
+        delete '/api/v1/reservations/999'
       end.to raise_error(ActiveRecord::RecordNotFound)
     end
   end
-
 end

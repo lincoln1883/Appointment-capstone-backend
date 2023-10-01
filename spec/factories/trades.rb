@@ -7,6 +7,6 @@ FactoryBot.define do
     price { '9.99' }
     duration { 'MyString' }
     trade_type { '' }
-    user { association :user } 
+    user { association :user }
   end
 end
