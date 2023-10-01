@@ -6,7 +6,7 @@ FactoryBot.define do
     location { 'MyString' }
     price { '9.99' }
     duration { 'MyString' }
-    type { '' }
-    user { nil }
+    trade_type { '' }
+    user { association :user } 
   end
 end
