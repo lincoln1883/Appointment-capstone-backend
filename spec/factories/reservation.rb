@@ -6,7 +6,7 @@ FactoryBot.define do
     location { Faker::Address.city }
     price { Faker::Number.decimal(l_digits: 2) }
     duration { Faker::Number.number(digits: 2) }
-    type { 'Reservation' }
+    trade_type { 'Reservation' }
     user { association :user }
     trade { association :trade }
   end
