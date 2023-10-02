@@ -101,15 +101,15 @@ PostgreSQL (version 15)
 - LinkedIn: [ibuu](https://www.linkedin.com/in/ibuu/)
 - Twitter: [@mdibrahimibuu](https://twitter.com/mdibrahimibuu)
 
-👤 **Lincoln Gibson**
-- GitHub: [lincoln1883](https://github.com/lincoln1883)
-- LinkedIn: [lincoln-gibson](https://www.linkedin.com/in/lincoln-gibson)
-- Twitter: [@lincolngibson7](https://twitter.com/lincolngibson7)
-
 👤 **Jorge Camargo**
 - GitHub: [@jicamargo](https://github.com/jicamargo)
 - LinkedIn: [Jorge Camargo](https://www.linkedin.com/in/jorgecamargog/?locale=en_US)
 - Twitter: [@ji_camargo](https://twitter.com/ji_camargo)
+
+👤 **Lincoln Gibson**
+- GitHub: [lincoln1883](https://github.com/lincoln1883)
+- LinkedIn: [lincoln-gibson](https://www.linkedin.com/in/lincoln-gibson)
+- Twitter: [@lincolngibson7](https://twitter.com/lincolngibson7)
 
 👤 **Moyasi Ginko**
 - GitHub: [@MoyasiGinko](https://github.com/MoyasiGinko)
