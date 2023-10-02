@@ -78,9 +78,9 @@ PostgreSQL (version 15)
 
 `rails s`
 
-5. Open your web browser and navigate to: http://localhost:3000/ to check that the server is running properly.
+5. Open your web browser and navigate to: http://localhost:3001/ to check that the server is running properly.
 
-6. Review the API documentation at: http://localhost:3000/api-docs/index.html
+6. Review the API documentation at: http://localhost:3001/api-docs/index.html
 
 7. **Front End**: To install the front-end of this project, please visit the [Appointment-capstone-frontend](https://github.com/lincoln1883/Appointment-capstone-frontend) repository and follow the instructions in the README.md file.
 
