@@ -1,15 +1,14 @@
 class Api::V1::TradesController < ApplicationController
   def index
+    # if current_user && current_user.role == 'admin'
+    # Retrieve a list of all trades from the database, if the user is an admin
+    # @trades = Trade.all
+    # else
+    # if the user is not an admin, retrieve a list of all trades that have not been removed
+    # @trades = Trade.where(removed: false)
+    # end
 
-    if current_user && current_user.role == 'admin'
-      # Retrieve a list of all trades from the database, if the user is an admin
-      @trades = Trade.all
-    else
-      # if the user is not an admin, retrieve a list of all trades that have not been removed
-      # @trades = Trade.where(removed: false)
-      @trades = Trade.all
-    end
-  
+    @trades = Trade.all
     # Return the list of trades as a JSON response
     render json: @trades, status: :ok
   end
@@ -51,7 +50,7 @@ class Api::V1::TradesController < ApplicationController
   def update
     # Retrieve the specific trade based on the ID parameter
     @trade = Trade.find(params[:id])
-    
+
     trade_params = trade_params()
     if @trade
       # Attempt to update the trade with the provided parameters
