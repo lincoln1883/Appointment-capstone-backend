@@ -6,7 +6,8 @@ class Api::V1::TradesController < ApplicationController
       @trades = Trade.all
     else
       # if the user is not an admin, retrieve a list of all trades that have not been removed
-      @trades = Trade.where(removed: false)
+      # @trades = Trade.where(removed: false)
+      @trades = Trade.all
     end
   
     # Return the list of trades as a JSON response
