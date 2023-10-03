@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>EasyTask Home App Back-end (API)</h1>
+	<h1>HandyHome Hub App Back-end (API)</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -18,9 +18,9 @@
 - [📝 License](#license)
 
 
-# ⚙️ "EasyTask Home" Backend  <a name="about-project"></a>
+# ⚙️ "HandyHome Hub" Backend  <a name="about-project"></a>
 
-**EasyTask Home Back-End" is a Ruby on Rails application that serves as a RESTful API. It utilizes PostgreSQL as its database.
+**HandyHome Hub Back-End" is a Ruby on Rails application that serves as a RESTful API. It utilizes PostgreSQL as its database.
 This API serves as the server-side component for booking appointments with home service providers, making it easy for users to schedule services such as house cleaning, plumbing, or any other home-related tasks.
 
 ## 🖥️Integration with Front-End
