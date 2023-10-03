@@ -1,8 +1,14 @@
 class Api::V1::TradesController < ApplicationController
   def index
-    # Retrieve a list of all trades from the database
-    @trades = Trade.all
 
+    if current_user && current_user.role == 'admin'
+      # Retrieve a list of all trades from the database, if the user is an admin
+      @trades = Trade.all
+    else
+      # if the user is not an admin, retrieve a list of all trades that have not been removed
+      @trades = Trade.where(removed: false)
+    end
+  
     # Return the list of trades as a JSON response
     render json: @trades, status: :ok
   end
