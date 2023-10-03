@@ -50,7 +50,8 @@ class Api::V1::TradesController < ApplicationController
   def update
     # Retrieve the specific trade based on the ID parameter
     @trade = Trade.find(params[:id])
-
+    
+    trade_params = trade_params()
     if @trade
       # Attempt to update the trade with the provided parameters
       if @trade.update(trade_params)
@@ -81,6 +82,6 @@ class Api::V1::TradesController < ApplicationController
   private
 
   def trade_params
-    params.require(:trade).permit(:name, :description, :image, :location, :price, :duration, :trade_type)
+    params.require(:trade).permit(:name, :description, :image, :location, :price, :duration, :trade_type, :removed)
   end
 end
