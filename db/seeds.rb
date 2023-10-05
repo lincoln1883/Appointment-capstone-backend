@@ -11,7 +11,9 @@
 # Create a user
 user = User.create(
   name: "John Doe",
-  role: "user"
+  email: "admin@example.com",
+  role: "admin",
+  password: "123456",
 )
 
 # Create multiple trades associated with the user
