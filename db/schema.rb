@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_30_052651) do
     t.bigint "user_id", null: false
     t.bigint "trade_id", null: false
     t.date "date", null: false
+    t.string "city", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trade_id"], name: "index_reservations_on_trade_id"

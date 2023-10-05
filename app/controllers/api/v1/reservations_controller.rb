@@ -11,7 +11,7 @@ class Api::V1::ReservationsController < ApplicationController
     @trade_id = params[:trade_id]
     @trade = Trade.find_by(id: @trade_id)
     @date = params[:date]
-
+    @city = params[:city]
     @message = nil
     @status = nil
 
@@ -19,8 +19,7 @@ class Api::V1::ReservationsController < ApplicationController
       @message = 'Trade not found'
       @status = :not_found
     else
-      @reservation = Reservation.new(user: current_user, trade: @trade, date: @date)
-
+      @reservation = Reservation.new(user: current_user, trade: @trade, date: @date, city: @city)
       if @reservation.save
         @message = 'Trade reserved successfully'
         @status = :created

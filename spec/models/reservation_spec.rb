@@ -4,7 +4,8 @@ RSpec.describe Reservation, type: :model do
   before(:each) do
     @user = create(:user)
     @trade = create(:trade)
-    @reservation = Reservation.new(user_id: @user.id, trade_id: @trade.id, date: Date.today)
+    @city = "dhaka"
+    @reservation = Reservation.new(user_id: @user.id, trade_id: @trade.id, date: Date.today, city: @city)
   end
 
   it 'is valid with valid attributes' do
@@ -32,7 +33,8 @@ RSpec.describe Reservation, type: :model do
   it 'is not valid with a duplicate user_id, trade_id, and date' do
     @reservation.save
     expect(@reservation).to be_valid
-    duplicate_reservation = Reservation.new(user_id: @user.id, trade_id: @trade.id, date: Date.today)
+
+    duplicate_reservation = Reservation.new(user_id: @user.id, trade_id: @trade.id, date: Date.today, city: @city)
     expect(duplicate_reservation).not_to be_valid
   end
 end
