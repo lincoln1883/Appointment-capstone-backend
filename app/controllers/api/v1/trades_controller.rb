@@ -1,4 +1,6 @@
 class Api::V1::TradesController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
+
   def index
     # if current_user && current_user.role == 'admin'
     # Retrieve a list of all trades from the database, if the user is an admin
@@ -19,12 +21,6 @@ class Api::V1::TradesController < ApplicationController
 
     # Step 2: Create a new trade instance
     @trade = Trade.new(trade_params)
-
-    # Step 3: Associate the trade with the currently authenticated user
-    # This will be replaced with the following line in the next step:
-    # @trade.user = current_user
-    first_user = User.first
-    @trade.user = first_user
 
     # Step 4: Save the trade record to the database
     if @trade.save
@@ -82,6 +78,6 @@ class Api::V1::TradesController < ApplicationController
   private
 
   def trade_params
-    params.require(:trade).permit(:name, :description, :image, :location, :price, :duration, :trade_type, :removed)
+    params.require(:trade).permit(:user_id, :name, :description, :image, :location, :price, :duration, :trade_type, :removed)
   end
 end
