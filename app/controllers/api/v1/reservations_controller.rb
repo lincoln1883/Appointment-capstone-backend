@@ -1,12 +1,12 @@
 class Api::V1::ReservationsController < ApplicationController
   before_action :authenticate_user!
+
   def index
-    current_user = User.find_by(id: 1)
-    @reservations = Reservation.includes(:trade).where(user_id: current_user)
+    @reservations = current_user.reservations.includes(:trade)
     render json: @reservations, include: :trade, status: :ok
   end
+  
 
-  before_action :authenticate_user!
   def create
     @trade_id = params[:trade_id]
     @trade = Trade.find_by(id: @trade_id)
@@ -37,7 +37,6 @@ class Api::V1::ReservationsController < ApplicationController
     render json: response_hash, status: @status
   end
 
-  before_action :authenticate_user!
   def show
     reservation_id = params[:id]
     reservations = Reservation.includes(:trade).where(id: reservation_id, user_id: current_user.id)
@@ -49,7 +48,6 @@ class Api::V1::ReservationsController < ApplicationController
     end
   end
 
-  before_action :authenticate_user!
   def destroy
     reservation = Reservation.find(params[:id])
     if reservation.destroy
