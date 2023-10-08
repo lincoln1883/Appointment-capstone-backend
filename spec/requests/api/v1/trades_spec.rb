@@ -23,17 +23,17 @@ RSpec.describe 'Trades', type: :request do
 
   describe 'POST /api/v1/trades' do
     it 'creates a new trade' do
-      sign_in user 
+      sign_in user
 
       trade_attributes = {
         name: 'House Drilling',
         description: 'Description of the trade',
         image: 'image.jpg',
         location: 'Trade Location',
-        price: '100.0', 
+        price: '100.0',
         duration: '1 hour',
         trade_type: 'Type of Trade',
-        user_id: user.id, 
+        user_id: user.id,
         removed: false
       }
 
@@ -46,7 +46,6 @@ RSpec.describe 'Trades', type: :request do
       json_response = JSON.parse(response.body)
       expect(json_response).to be_a(Hash)
       expect(json_response['name']).to eq('House Drilling')
-
     end
   end
 
@@ -68,7 +67,6 @@ RSpec.describe 'Trades', type: :request do
 
       expect(json_response).to be_a(Hash)
       expect(json_response['id']).to eq(trade.id)
-
     end
 
     it 'returns a not found error when the trade does not exist' do
@@ -86,7 +84,7 @@ RSpec.describe 'Trades', type: :request do
   describe 'DELETE /api/v1/trades/:id' do
     it 'deletes a specific trade' do
       trade = create(:trade)
-      sign_in user 
+      sign_in user
 
       delete "/api/v1/trades/#{trade.id}"
 
