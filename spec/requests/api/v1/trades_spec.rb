@@ -42,13 +42,11 @@ RSpec.describe 'Trades', type: :request do
       expect(response).to have_http_status(:created)
       expect(response.content_type).to eq('application/json; charset=utf-8')
 
-
       json_response = JSON.parse(response.body)
       expect(json_response).to be_a(Hash)
       expect(json_response['name']).to eq('House Drilling')
     end
   end
-
 
   describe 'GET /api/v1/trades/:id' do
     it 'returns a specific trade' do
@@ -61,9 +59,7 @@ RSpec.describe 'Trades', type: :request do
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to eq('application/json; charset=utf-8')
 
-
       json_response = JSON.parse(response.body)
-
 
       expect(json_response).to be_a(Hash)
       expect(json_response['id']).to eq(trade.id)
@@ -89,7 +85,6 @@ RSpec.describe 'Trades', type: :request do
       delete "/api/v1/trades/#{trade.id}"
 
       expect(response).to have_http_status(:no_content)
-
 
       deleted_trade = Trade.find_by(id: trade.id)
 
