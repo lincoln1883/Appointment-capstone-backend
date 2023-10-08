@@ -26,7 +26,6 @@ class Api::V1::TradesController < ApplicationController
   end
 
   def show
-    # Retrieve the specific trade based on the ID parameter
     @trade = Trade.find(params[:id])
 
     if @trade
