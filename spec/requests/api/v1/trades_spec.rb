@@ -68,7 +68,7 @@ RSpec.describe 'Trades', type: :request do
 
       expect(json_response).to be_a(Hash)
       expect(json_response['id']).to eq(trade.id)
-      # Add more attribute checks as needed
+
     end
 
     it 'returns a not found error when the trade does not exist' do
@@ -86,7 +86,7 @@ RSpec.describe 'Trades', type: :request do
   describe 'DELETE /api/v1/trades/:id' do
     it 'deletes a specific trade' do
       trade = create(:trade)
-      sign_in user # Sign in a user (you can adjust this as needed)
+      sign_in user 
 
       delete "/api/v1/trades/#{trade.id}"
 
