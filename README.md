@@ -132,9 +132,6 @@ You can see a screenshoot of the initial state of the board below:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add categories to services**
