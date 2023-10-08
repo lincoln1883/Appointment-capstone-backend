@@ -46,7 +46,6 @@ class Api::V1::TradesController < ApplicationController
         render json: @trade.errors, status: :unprocessable_entity
       end
     else
-      # Handle the case where the trade with the given ID is not found
       render json: { error: 'Trade not found' }, status: :not_found
     end
   end
