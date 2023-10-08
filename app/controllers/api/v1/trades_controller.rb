@@ -18,7 +18,6 @@ class Api::V1::TradesController < ApplicationController
 
     @trade = Trade.new(trade_params)
 
-    # Step 4: Save the trade record to the database
     if @trade.save
       render json: @trade, status: :created
     else
