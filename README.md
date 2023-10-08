@@ -11,6 +11,7 @@
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
 - [👥 Authors](#authors)
+- [📈 Kanban Board](#kanban)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -118,6 +119,19 @@ PostgreSQL (version 15)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- KANBAN BOARD -->
+
+## 📈 Kanban Board<a name="kanban"></a>
+
+The project's kanban board is available [here](https://github.com/lincoln1883/appointment-capstone-backend/projects/1)
+
+You can see a screenshoot of the initial state of the board below:
+
+![Kanban Board](./public/kanban-board-initial.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- FUTURE FEATURES -->
