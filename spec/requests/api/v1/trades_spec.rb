@@ -62,7 +62,6 @@ RSpec.describe 'Trades', type: :request do
 
       json_response = JSON.parse(response.body)
 
-
       expect(json_response).to be_a(Hash)
       expect(json_response['id']).to eq(trade.id)
     end
