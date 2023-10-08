@@ -29,7 +29,7 @@ RSpec.describe 'Reservation API', type: :request do
         {
           trade_id: trade.id,
           date: '2023-10-01',
-          city: 'city',
+          city: 'city'
         }
       end
 
