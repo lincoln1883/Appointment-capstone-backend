@@ -4,7 +4,7 @@ class Api::V1::TradesController < ApplicationController
   def index
     # if current_user && current_user.role == 'admin'
     # Retrieve a list of all trades from the database, if the user is an admin
-    # @trades = Trade.all
+
 
 
 
