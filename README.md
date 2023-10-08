@@ -87,8 +87,6 @@ PostgreSQL (version 15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
 ## 👥 Authors (in alphabetical order)<a name="authors"></a>
 >
 
