@@ -87,7 +87,6 @@ RSpec.describe 'Trades', type: :request do
 
       expect(response).to have_http_status(:no_content)
 
-
       deleted_trade = Trade.find_by(id: trade.id)
 
       expect(deleted_trade).to be_nil
