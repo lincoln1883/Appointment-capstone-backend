@@ -4,7 +4,7 @@ RSpec.describe Reservation, type: :model do
   before(:each) do
     @user = create(:user)
     @trade = create(:trade)
-    @city = "dhaka"
+    @city = 'dhaka'
     @reservation = Reservation.new(user_id: @user.id, trade_id: @trade.id, date: Date.today, city: @city)
   end
 
