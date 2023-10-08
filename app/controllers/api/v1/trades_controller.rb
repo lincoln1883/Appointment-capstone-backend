@@ -2,13 +2,6 @@ class Api::V1::TradesController < ApplicationController
   before_action :authenticate_user!, only: %i[create update destroy]
 
   def index
- 
-
-
-
-
-
-
     @trades = Trade.all
     render json: @trades, status: :ok
   end
