@@ -107,7 +107,3 @@ RSpec.describe 'Trades', type: :request do
     end
   end
 end
-
-
-
-
