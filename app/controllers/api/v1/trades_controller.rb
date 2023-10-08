@@ -57,7 +57,6 @@ class Api::V1::TradesController < ApplicationController
       @trade.destroy
       head :no_content
     else
-      # Handle the case where the trade with the given ID is not found
       render json: { error: 'Trade not found' }, status: :not_found
     end
   end
