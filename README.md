@@ -175,7 +175,7 @@ Feel free to check the [issues page](https://github.com/lincoln1883/Appointment-
 
 <!-- FAQ (optional) -->
 
-<!-- LICENSE -->
+
 
 ## 📝 License <a name="license"></a>
 
