@@ -120,8 +120,6 @@ PostgreSQL (version 15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- KANBAN BOARD -->
-
 ## 📈 Kanban Board<a name="kanban"></a>
 
 The project's kanban board is available [here](https://github.com/lincoln1883/appointment-capstone-backend/projects/1)
