@@ -36,7 +36,6 @@ class Api::V1::TradesController < ApplicationController
   end
 
   def update
-    # Retrieve the specific trade based on the ID parameter
     @trade = Trade.find(params[:id])
 
     trade_params = trade_params()
