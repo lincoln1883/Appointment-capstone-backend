@@ -29,7 +29,6 @@ class Api::V1::TradesController < ApplicationController
     @trade = Trade.find(params[:id])
 
     if @trade
-      # Return the trade details as a JSON response
       render json: @trade, status: :ok
     else
       # Handle the case where the trade with the given ID is not found
