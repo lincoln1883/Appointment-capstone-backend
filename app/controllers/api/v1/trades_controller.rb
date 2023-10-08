@@ -40,7 +40,6 @@ class Api::V1::TradesController < ApplicationController
 
     trade_params = trade_params()
     if @trade
-      # Attempt to update the trade with the provided parameters
       if @trade.update(trade_params)
         render json: @trade, status: :ok
       else
