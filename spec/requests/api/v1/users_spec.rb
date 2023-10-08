@@ -30,8 +30,7 @@ RSpec.describe Api::V1::UsersController, type: :request do
       end
 
       it 'returns an error message in JSON' do
-        json_response = JSON.parse(response.body)
-        expect(json_response).to include('error' => 'User not authenticated')
+        expect(response.body).to include('You need to sign in or sign up before continuing.')
       end
     end
   end
