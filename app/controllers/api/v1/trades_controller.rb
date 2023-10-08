@@ -1,5 +1,5 @@
 class Api::V1::TradesController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :update, :destroy]
+  before_action :authenticate_user!, only: %i[create update destroy]
 
   def index
     # if current_user && current_user.role == 'admin'
@@ -78,6 +78,7 @@ class Api::V1::TradesController < ApplicationController
   private
 
   def trade_params
-    params.require(:trade).permit(:user_id, :name, :description, :image, :location, :price, :duration, :trade_type, :removed)
+    params.require(:trade).permit(:user_id, :name, :description, :image, :location, :price, :duration, :trade_type,
+                                  :removed)
   end
 end
