@@ -48,8 +48,6 @@ This back-end project is designed to seamlessly integrate with its counterpart *
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ### Prerequisites
