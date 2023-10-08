@@ -54,7 +54,6 @@ class Api::V1::TradesController < ApplicationController
     @trade = Trade.find(params[:id])
 
     if @trade
-      # Attempt to destroy (delete) the trade
       @trade.destroy
       head :no_content
     else
