@@ -62,10 +62,10 @@ RSpec.describe 'Trades', type: :request do
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to eq('application/json; charset=utf-8')
 
-      # Parse the JSON response
+
       json_response = JSON.parse(response.body)
 
-      # Expect that the response contains the requested trade
+
       expect(json_response).to be_a(Hash)
       expect(json_response['id']).to eq(trade.id)
       # Add more attribute checks as needed
