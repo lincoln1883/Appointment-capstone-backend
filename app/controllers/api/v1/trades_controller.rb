@@ -14,7 +14,6 @@ class Api::V1::TradesController < ApplicationController
   end
 
   def create
-    # Step 1: Retrieve trade parameters from the request
     trade_params = trade_params()
 
     # Step 2: Create a new trade instance
