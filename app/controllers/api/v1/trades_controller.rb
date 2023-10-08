@@ -6,7 +6,7 @@ class Api::V1::TradesController < ApplicationController
     # Retrieve a list of all trades from the database, if the user is an admin
     # @trades = Trade.all
     # else
-    # if the user is not an admin, retrieve a list of all trades that have not been removed
+
 
 
 
