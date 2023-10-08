@@ -23,22 +23,33 @@ RSpec.describe 'Trades', type: :request do
 
   describe 'POST /api/v1/trades' do
     it 'creates a new trade' do
-      user = create(:user, id: 1)
-      sign_in user if user
+      sign_in user # Sign in a user (you can adjust this as needed)
 
-      trade_attributes = attributes_for(:trade)
+      trade_attributes = {
+        name: 'House Drilling',
+        description: 'Description of the trade',
+        image: 'image.jpg',
+        location: 'Trade Location',
+        price: '100.0', # Use a string for decimal values
+        duration: '1 hour',
+        trade_type: 'Type of Trade',
+        user_id: user.id, # Set the user_id to the signed-in user's id
+        removed: false
+      }
 
       post '/api/v1/trades', params: { trade: trade_attributes }
 
       expect(response).to have_http_status(:created)
       expect(response.content_type).to eq('application/json; charset=utf-8')
 
+      # Parse the JSON response and make assertions as needed
       json_response = JSON.parse(response.body)
-
       expect(json_response).to be_a(Hash)
-      expect(json_response['name']).to eq(trade_attributes[:name])
+      expect(json_response['name']).to eq('House Drilling')
+      # Add more attribute checks as needed
     end
   end
+
 
   describe 'GET /api/v1/trades/:id' do
     it 'returns a specific trade' do
