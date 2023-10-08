@@ -10,7 +10,6 @@ class Api::V1::TradesController < ApplicationController
 
 
     @trades = Trade.all
-    # Return the list of trades as a JSON response
     render json: @trades, status: :ok
   end
 
