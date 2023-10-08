@@ -42,7 +42,6 @@ RSpec.describe 'Trades', type: :request do
       expect(response).to have_http_status(:created)
       expect(response.content_type).to eq('application/json; charset=utf-8')
 
-
       json_response = JSON.parse(response.body)
       expect(json_response).to be_a(Hash)
       expect(json_response['name']).to eq('House Drilling')
