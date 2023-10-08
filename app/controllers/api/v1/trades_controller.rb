@@ -31,7 +31,6 @@ class Api::V1::TradesController < ApplicationController
     if @trade
       render json: @trade, status: :ok
     else
-      # Handle the case where the trade with the given ID is not found
       render json: { error: 'Trade not found' }, status: :not_found
     end
   end
