@@ -5,7 +5,6 @@ class Api::V1::ReservationsController < ApplicationController
     @reservations = current_user.reservations.includes(:trade)
     render json: @reservations, include: :trade, status: :ok
   end
-  
 
   def create
     @trade_id = params[:trade_id]
