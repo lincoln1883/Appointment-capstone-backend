@@ -16,7 +16,6 @@ class Api::V1::TradesController < ApplicationController
   def create
     trade_params = trade_params()
 
-    # Step 2: Create a new trade instance
     @trade = Trade.new(trade_params)
 
     # Step 4: Save the trade record to the database
