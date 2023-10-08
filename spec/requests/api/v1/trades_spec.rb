@@ -85,18 +85,16 @@ RSpec.describe 'Trades', type: :request do
 
   describe 'DELETE /api/v1/trades/:id' do
     it 'deletes a specific trade' do
-      # Create a trade using FactoryBot
       trade = create(:trade)
+      sign_in user # Sign in a user (you can adjust this as needed)
 
       delete "/api/v1/trades/#{trade.id}"
 
-      # Expect a successful response (HTTP status 204, no content)
       expect(response).to have_http_status(:no_content)
 
-      # Attempt to find the deleted trade
+      # Attempt to find the deleted trade in the database
       deleted_trade = Trade.find_by(id: trade.id)
 
-      # Expect the trade to no longer exist in the database
       expect(deleted_trade).to be_nil
     end
 
