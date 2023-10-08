@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>EasyTask Home App Back-end (API)</h1>
+	<h1>HandyHome Hub App Back-end (API)</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,9 +19,9 @@
 - [📝 License](#license)
 
 
-# ⚙️ "EasyTask Home" Backend  <a name="about-project"></a>
+# ⚙️ "HandyHome Hub" Backend  <a name="about-project"></a>
 
-**EasyTask Home Back-End" is a Ruby on Rails application that serves as a RESTful API. It utilizes PostgreSQL as its database.
+**HandyHome Hub Back-End" is a Ruby on Rails application that serves as a RESTful API. It utilizes PostgreSQL as its database.
 This API serves as the server-side component for booking appointments with home service providers, making it easy for users to schedule services such as house cleaning, plumbing, or any other home-related tasks.
 
 ## 🖥️Integration with Front-End
@@ -47,8 +47,6 @@ This back-end project is designed to seamlessly integrate with its counterpart *
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -87,8 +85,6 @@ PostgreSQL (version 15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
 ## 👥 Authors (in alphabetical order)<a name="authors"></a>
 >
 
@@ -120,8 +116,6 @@ PostgreSQL (version 15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- KANBAN BOARD -->
-
 ## 📈 Kanban Board<a name="kanban"></a>
 
 The project's kanban board is available [here](https://github.com/lincoln1883/appointment-capstone-backend/projects/1)
@@ -132,9 +126,6 @@ You can see a screenshoot of the initial state of the board below:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add categories to services**
@@ -144,8 +135,6 @@ You can see a screenshoot of the initial state of the board below:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
@@ -154,15 +143,11 @@ Feel free to check the [issues page](https://github.com/lincoln1883/Appointment-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
 - If you like this project please give it a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -172,10 +157,6 @@ Feel free to check the [issues page](https://github.com/lincoln1883/Appointment-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
