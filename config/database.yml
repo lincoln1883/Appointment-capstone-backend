@@ -18,9 +18,5 @@ test:
 
 production:
   <<: *default
-  adapter: "postgresql"
-  encoding: "unicode"
   url: <%= ENV["DATABASE_URL"] %>
-  database: appointments
-  username: <%= ENV['POSTGRES_USERNAME'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  

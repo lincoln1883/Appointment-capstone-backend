@@ -1,8 +1,8 @@
 databases:
-  - name: postgres
+  - name: capstone
     ipAllowList: []
-    databaseName: appointments
-    user: gotblswx
+    databaseName: capstone
+    user: capstone_as7w_user
 
 services:
   - type: web
