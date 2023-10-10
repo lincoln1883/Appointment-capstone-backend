@@ -1,26 +1,16 @@
 class Api::V1::TradesController < ApplicationController
-  def index
-    # Retrieve a list of all trades from the database
-    @trades = Trade.all
+  before_action :authenticate_user!, only: %i[create update destroy]
 
-    # Return the list of trades as a JSON response
+  def index
+    @trades = Trade.all
     render json: @trades, status: :ok
   end
 
   def create
-    # Step 1: Retrieve trade parameters from the request
     trade_params = trade_params()
 
-    # Step 2: Create a new trade instance
     @trade = Trade.new(trade_params)
 
-    # Step 3: Associate the trade with the currently authenticated user
-    # This will be replaced with the following line in the next step:
-    # @trade.user = current_user
-    first_user = User.first
-    @trade.user = first_user
-
-    # Step 4: Save the trade record to the database
     if @trade.save
       render json: @trade, status: :created
     else
@@ -29,45 +19,37 @@ class Api::V1::TradesController < ApplicationController
   end
 
   def show
-    # Retrieve the specific trade based on the ID parameter
     @trade = Trade.find(params[:id])
 
     if @trade
-      # Return the trade details as a JSON response
       render json: @trade, status: :ok
     else
-      # Handle the case where the trade with the given ID is not found
       render json: { error: 'Trade not found' }, status: :not_found
     end
   end
 
   def update
-    # Retrieve the specific trade based on the ID parameter
     @trade = Trade.find(params[:id])
 
+    trade_params = trade_params()
     if @trade
-      # Attempt to update the trade with the provided parameters
       if @trade.update(trade_params)
         render json: @trade, status: :ok
       else
         render json: @trade.errors, status: :unprocessable_entity
       end
     else
-      # Handle the case where the trade with the given ID is not found
       render json: { error: 'Trade not found' }, status: :not_found
     end
   end
 
   def destroy
-    # Retrieve the specific trade based on the ID parameter
     @trade = Trade.find(params[:id])
 
     if @trade
-      # Attempt to destroy (delete) the trade
       @trade.destroy
       head :no_content
     else
-      # Handle the case where the trade with the given ID is not found
       render json: { error: 'Trade not found' }, status: :not_found
     end
   end
@@ -75,6 +57,7 @@ class Api::V1::TradesController < ApplicationController
   private
 
   def trade_params
-    params.require(:trade).permit(:name, :description, :image, :location, :price, :duration, :trade_type)
+    params.require(:trade).permit(:user_id, :name, :description, :image, :location, :price, :duration, :trade_type,
+                                  :removed)
   end
 end

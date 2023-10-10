@@ -9,8 +9,10 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
 - [👥 Authors](#authors)
+- [📈 Kanban Board](#kanban)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -44,6 +46,14 @@ This back-end project is designed to seamlessly integrate with its counterpart *
 - Appointment booking: Users can book appointments with service providers.
 - Services management: Service providers ("admin" users) can create, edit, and delete services.
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO  -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- Enjoy the live version of the API with its front-end counterpart [here](https://handyhomehub.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,8 +96,6 @@ PostgreSQL (version 15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
 ## 👥 Authors (in alphabetical order)<a name="authors"></a>
 >
 
@@ -119,8 +127,16 @@ PostgreSQL (version 15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 📈 Kanban Board<a name="kanban"></a>
 
-<!-- FUTURE FEATURES -->
+The project's kanban board is available [here](https://github.com/lincoln1883/appointment-capstone-backend/projects/1)
+
+You can see a screenshoot of the initial state of the board below:
+
+![Kanban Board](./public/kanban-board-initial.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add categories to services**
@@ -130,8 +146,6 @@ PostgreSQL (version 15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
@@ -140,15 +154,11 @@ Feel free to check the [issues page](https://github.com/lincoln1883/Appointment-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
 - If you like this project please give it a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -158,10 +168,6 @@ Feel free to check the [issues page](https://github.com/lincoln1883/Appointment-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 

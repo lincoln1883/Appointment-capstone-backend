@@ -23,10 +23,19 @@ RSpec.describe 'Trades', type: :request do
 
   describe 'POST /api/v1/trades' do
     it 'creates a new trade' do
-      user = create(:user, id: 1)
-      sign_in user if user
+      sign_in user
 
-      trade_attributes = attributes_for(:trade)
+      trade_attributes = {
+        name: 'House Drilling',
+        description: 'Description of the trade',
+        image: 'image.jpg',
+        location: 'Trade Location',
+        price: '100.0',
+        duration: '1 hour',
+        trade_type: 'Type of Trade',
+        user_id: user.id,
+        removed: false
+      }
 
       post '/api/v1/trades', params: { trade: trade_attributes }
 
@@ -34,9 +43,8 @@ RSpec.describe 'Trades', type: :request do
       expect(response.content_type).to eq('application/json; charset=utf-8')
 
       json_response = JSON.parse(response.body)
-
       expect(json_response).to be_a(Hash)
-      expect(json_response['name']).to eq(trade_attributes[:name])
+      expect(json_response['name']).to eq('House Drilling')
     end
   end
 
@@ -51,13 +59,10 @@ RSpec.describe 'Trades', type: :request do
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to eq('application/json; charset=utf-8')
 
-      # Parse the JSON response
       json_response = JSON.parse(response.body)
 
-      # Expect that the response contains the requested trade
       expect(json_response).to be_a(Hash)
       expect(json_response['id']).to eq(trade.id)
-      # Add more attribute checks as needed
     end
 
     it 'returns a not found error when the trade does not exist' do
@@ -74,18 +79,15 @@ RSpec.describe 'Trades', type: :request do
 
   describe 'DELETE /api/v1/trades/:id' do
     it 'deletes a specific trade' do
-      # Create a trade using FactoryBot
       trade = create(:trade)
+      sign_in user
 
       delete "/api/v1/trades/#{trade.id}"
 
-      # Expect a successful response (HTTP status 204, no content)
       expect(response).to have_http_status(:no_content)
 
-      # Attempt to find the deleted trade
       deleted_trade = Trade.find_by(id: trade.id)
 
-      # Expect the trade to no longer exist in the database
       expect(deleted_trade).to be_nil
     end
 

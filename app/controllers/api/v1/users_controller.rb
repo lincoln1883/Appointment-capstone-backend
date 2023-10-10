@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   def index
     if current_user
       render json: UserSerializer.new(current_user).serializable_hash[:data][:attributes], status: :ok
