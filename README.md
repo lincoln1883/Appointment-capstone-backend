@@ -7,10 +7,14 @@
 # 📗 Table of Contents
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
+  - [Tech Stack](#tech-stack)
+  - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Usage](#usage)
+  - [Tests](#tests)
 - [👥 Authors](#authors)
 - [📈 Kanban Board](#kanban)
 - [🔭 Future Features](#future-features)
@@ -122,7 +126,6 @@ In order to run this project you need the following installed locally:
 1. Clone the repository:
 
 ```
-  cd folder
   git clone https://github.com/lincoln1883/Appointment-capstone-backend.git
 ```
 
@@ -136,7 +139,11 @@ In order to run this project you need the following installed locally:
 1. Create a master key file in the config folder and add the master key to it. This key is used to decrypt the credentials.yml.enc file. You can use the following command to generate the key:
 
 ```
-  run EDITOR="code --wait" rails credentials:edit
+  1. Remove config/master.key and config/credentials.yml.enc if they exist.
+  2. Run in the terminal: EDITOR=code rails credentials:edit 
+  3. Close the editor that opens.
+  4. This command will create a new master.key and credentials.yml.enc
+   if they do not exist.
 ```
 
 2. Configure the database.yml file with your database credentials
