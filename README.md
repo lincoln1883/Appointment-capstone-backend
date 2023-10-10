@@ -53,7 +53,7 @@ This back-end project is designed to seamlessly integrate with its counterpart *
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Enjoy the live version of the API with its front-end counterpart [Live Demo Link](https://handyhomehub.netlify.app/)
+- Enjoy the live version of the API with its front-end counterpart [here](https://handyhomehub.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
