@@ -31,12 +31,42 @@ This back-end project is designed to seamlessly integrate with its counterpart *
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-### Built With <a name="built-with"></a>
-
-#### Tech Stack <a name="tech-stack"></a>
-
-- Ruby on Rails
-- PostgreSQL
+<details>
+<summary>Ruby</summary>
+  <ul>
+    <li><a href="https://www.ruby-lang.org/">Ruby</a></li>
+  </ul>
+</details>
+<details>
+<summary>Rails</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby</a></li>
+  </ul>
+</details>
+<details>
+<summary>RSpec</summary>
+  <ul>
+    <li><a href="https://rspec.info/">RSpec</a></li>
+  </ul>
+</details>
+<details>
+<summary>PostgreSQL</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+<details>
+<summary>Swagger</summary>
+  <ul>
+    <li><a href="https://swagger.io/">Swagger</a></li>
+  </ul>
+</details>
+<details>
+<summary>Tailwind CSS</summary>
+  <ul>
+    <li><a href="https://tailwindcss.com/">Tailwind</a></li>
+  </ul>
+</details>
 
 #### Key Features <a name="key-features"></a>
 
@@ -63,36 +93,92 @@ This back-end project is designed to seamlessly integrate with its counterpart *
 
 ### Prerequisites
 
-Ruby (version 3.2)
-Ruby on Rails (version 7.0)
-PostgreSQL (version 15)
+In order to run this project you need the following installed locally:
+
+```sh
+ gem install ruby
+```
+```sh 
+ gem install rails
+```
+
+- Linux:
+
+```sh
+  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  sudo apt-get update
+  sudo apt-get -y install postgresql
+```
+- Windows:
+  [Visit this website for detailed instructions](https://www.postgresql.org/download/windows/)
+
+- Mac:
+  [Visit this website for detailed instructions](https://www.postgresql.org/download/macosx/)
 
 
 ### Setup
 
 1. Clone the repository:
 
-`git clone https://github.com/lincoln1883/Appointment-capstone-backend.git`
+```
+  cd folder
+  git clone https://github.com/lincoln1883/Appointment-capstone-backend.git
+```
 
 2. Install the dependencies:
 
-`bundle install`
+```
+  run bundle install
+```
 
+### Usage
+1. Create a master key file in the config folder and add the master key to it. This key is used to decrypt the credentials.yml.enc file. You can use the following command to generate the key:
+
+```
+  run EDITOR="code --wait" rails credentials:edit
+```
+
+2. Configure the database.yml file with your database credentials
+```
+    development:
+        <<: *default
+        database: your_database_name
+        username: your_username
+        password: your_password
+        port: 5432
+         
+    test:
+        <<: *default
+        database: your_database_name
+        username: your_username
+        password: your_password
+        port: 5432
+```
 3. Set up the database
 
-`rails db:create`
-`rails db:migrate`
-`rails db:seed`
+```
+  rails db:create
+  rails db:migrate
+```
 
-4. Start the server in a bash terminal:
+4. Start the server in your favorite terminal:
 
-`rails s`
+```
+  rails server
+```
 
-5. Open your web browser and navigate to: http://localhost:3001/ to check that the server is running properly.
+5. Review the API documentation at: http://localhost:3001/api-docs
 
-6. Review the API documentation at: http://localhost:3001/api-docs/index.html
 
-7. **Front End**: To install the front-end of this project, please visit the [Appointment-capstone-frontend](https://github.com/lincoln1883/Appointment-capstone-frontend) repository and follow the instructions in the README.md file.
+### Tests
+
+You can run tests with the following command:
+```sh 
+  rspec
+```
+
+1. **Front End**: To install the front-end of this project, please visit the [Appointment-capstone-frontend](https://github.com/lincoln1883/Appointment-capstone-frontend) repository and follow the instructions in the README.md file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
