@@ -9,6 +9,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
 - [👥 Authors](#authors)
 - [📈 Kanban Board](#kanban)
@@ -47,6 +48,16 @@ This back-end project is designed to seamlessly integrate with its counterpart *
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO  -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- Enjoy the live version of the API with its front-end counterpart [Live Demo Link](https://handyhomehub.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
