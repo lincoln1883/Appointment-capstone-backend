@@ -65,12 +65,6 @@ This back-end project is designed to seamlessly integrate with its counterpart *
     <li><a href="https://swagger.io/">Swagger</a></li>
   </ul>
 </details>
-<details>
-<summary>Tailwind CSS</summary>
-  <ul>
-    <li><a href="https://tailwindcss.com/">Tailwind</a></li>
-  </ul>
-</details>
 
 #### Key Features <a name="key-features"></a>
 
