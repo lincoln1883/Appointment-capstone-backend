@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "https://handyhomehub.netlify.app/"
+    origins "https://handyhomehub.netlify.app"
 
     resource "*",
       headers: :any,
