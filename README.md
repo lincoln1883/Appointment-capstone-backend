@@ -169,7 +169,7 @@ In order to run this project you need the following installed locally:
   rails server
 ```
 
-5. Review the API documentation at: http://localhost:3001/api-docs
+5. Review the API documentation here: [Swagger API Documentation](https://appointments-ajt3.onrender.com/api-docs/index.html)
 
 
 ### Tests
