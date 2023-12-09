@@ -50,9 +50,10 @@ group :development do
   # gem "spring"
 end
 
-gem 'devise'
+gem 'devise', '4.9.2'
 gem 'devise-jwt'
 gem 'faker'
 gem 'jsonapi-serializer'
 gem 'rswag'
 gem 'rubocop', '~> 1.18'
+gem 'warden-jwt_auth', '0.8.0'
