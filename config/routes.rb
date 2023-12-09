@@ -18,6 +18,4 @@ Rails.application.routes.draw do
       resources :reservations, only: [:index, :create, :show, :destroy]
     end
   end
-
-  root 'api/v1/users/registrations#new'
 end
