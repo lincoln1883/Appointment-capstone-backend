@@ -16,7 +16,7 @@ trades = [
         price: 100.0,
         duration: "1 hour",
         trade_type: "Type of Trade",
-        user: user,
+        user_id: user.id,
         removed: false
     },
     {
@@ -27,7 +27,7 @@ trades = [
         price: 100.0,
         duration: "1 hour",
         trade_type: "Type of Trade",
-        user: user,
+        user_id: user.id,
         removed: false
     },
     {
@@ -38,7 +38,7 @@ trades = [
         price: 100.0,
         duration: "1 hour",
         trade_type: "Type of Trade",
-        user: user,
+        user_id: user.id,
         removed: false
     },
     {
@@ -49,7 +49,7 @@ trades = [
         price: 100.0,
         duration: "1 hour",
         trade_type: "Type of Trade",
-        user: user,
+        user_id: user.id,
         removed: false
     },
     {
@@ -60,7 +60,7 @@ trades = [
         price: 100.0,
         duration: "1 hour",
         trade_type: "Type of Trade",
-        user: user,
+        user_id: user.id,
         removed: true
     }
 ]
