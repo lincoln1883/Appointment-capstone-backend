@@ -1,7 +1,7 @@
 # Create a user
 user = User.create(
-  name: "John Doe",
-  email: "john@example.com",
+  name: "John",
+  email: "john@admin.com",
   password: "123456",
   role: "admin"
 )
