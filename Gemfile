@@ -50,7 +50,7 @@ group :development do
   # gem "spring"
 end
 
-gem 'devise', '4.9.2'
+gem 'devise', '4.9.4'
 gem 'devise-jwt'
 gem 'faker'
 gem 'jsonapi-serializer'
